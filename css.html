@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selector</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body style="background-color: bisque;">
+    <a href="https://www.google.com/" target="_top">google.com</a><br>
+    <a href="https://www.google.com/" target="_self">this is google</a><br>
+    <a href="https://www.google.com/" target="_parent">welcome to google</a>
+    <div class="class1">
+        <div class="class2">class1 is parent class of class2</div>
+    </div>
+    <div class="class1 class2">This is different from previous class</div>
+    <h2>The current color keyword</h2>
+    <p>This is some text in the body...</p>
+    <div>
+        <p>This div's background color is set to the color valueof the body element.</p>
+    </div>
+
+    <div class="class1 class2 class3">
+        <div class="class1 class2">
+            <div class="class3">
+                <p>This is another paragraph.</p>
+            </div>
+        </div>
+    </div>
+    
+    <div data-color="red">This will be red</div>
+    <div data-color="green">This will be red</div>
+    <div data-background="red">This will NOT be red</div>
+<br><br>
+    <div data-color-value="yellow">This will be yellow</div>
+    <div data-color-value="green">This will NOT be yellow</div>
+    <div data-color-value="voilet">This will NOT be yellow</div>
+<br><br>
+    <div class="foo-123">This will be silver</div> <!--Anywhere should class match-->
+    <div class="foooolish">This will  be silver</div>
+    <div class="vofooooviilet">This will  be silver</div>
+    <div class="vofooooviilet">This will  be silver</div>
+    <div class="folish">This will NOT be silver</div>
+<br><br>
+    <div class="color123 hellowi sjnk">This will be golden</div> <!--Only with space should match-->
+    <div class="color123hdosk">This will NOT be golden</div>
+    <div class="color121">This will  be golden</div>
+<br><br>
+
+    <div class="color69 hellowi sjnk">This will be pink</div> <!--At the starting should match-->
+    <div class="color69hdosk">This will be be pink</div>
+    <div class="hellow color69">This will NOT be pink</div>
+<br><br>
+
+    <div class="hwllow world">This will be orange</div> <!--At the ending should match-->
+    <div class="hwlloeworld">This will be be orange</div>
+    <div class="hellowworldcolor69">This will NOT be orange</div>
+<br><br>
+<div>
+    <span>Hellowww
+        <div>
+            <span>Deepansh
+                <div>
+                    <span>Helo</span>
+                </div>
+            </span>
+        </div>
+        
+    </span>
+</div>
+
+<div>
+    <span>
+        <div><p>hhahahahahah</p>
+            <p>hsasiu</p>
+            <p>fiagiuhai</p><div>
+
+        </div>
+            <span>
+                Tilde
+            </span>
+        </div>
+    </span>
+</div>
+<div class="warning">
+    <p>heavy khatra warninggggggg!</p>
+</div>
+<div class="important">
+    <p>very zarurui</p>
+</div>
+
+<div class="container">
+    <p>First para</p>
+    <p>second para</p>
+    <p>third para</p>
+    <h2>Heading 1</h2>
+    <h2>Heading 2</h2>
+</div>
+
+
+<input type="number" min="10" max="20" value="15">
+
+
+</body>
+
+</html>

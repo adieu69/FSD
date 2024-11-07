@@ -1,0 +1,81 @@
+a[target="_top"]{
+    background-color: red;
+}
+div[data-color]{
+    color:red
+}
+
+div[data-color-value="yellow"]{
+    color:yellow
+}
+
+[class*="foo"]{
+    color:silver
+}
+
+div span{
+    color:aqua
+}
+div>span{
+    color:green
+}
+
+div~span{
+    color:grey
+}
+
+p+p{
+    color:firebrick
+}
+
+[class="warning"]{
+    color:indianred
+}
+[class="important"]{
+    color:palegreen
+}
+[class~="color123"]{
+    color:goldenrod
+}
+
+p:last-of-type{
+    background: #C5CAE9;
+}
+
+h2:last-of-type{
+    background: #CDDC39;
+}
+
+
+input:in-range{
+    border: 1px solid blue;
+}
+
+[class^="color69"]{
+    color:pink
+}
+
+[class$="world"]{
+    color:orange
+}
+
+a[target="_self"]{
+    background-color: yellow;
+}
+a[target="_parent"]{
+    background-color: green;
+}
+.class1 .class2{
+    background-color: aqua;
+}
+.class1.class2{
+    background-color: orange;
+    align-content: center;
+}
+.class3 .class1.class2{
+    background-color: red;
+}
+
+body{
+    color: purple;
+}
