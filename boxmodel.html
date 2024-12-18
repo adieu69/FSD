@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>box model and specificity</title>
+    <style>
+        html{margin: 0px; padding: 0px;}
+        *{margin: 0px;}
+        .b-m{
+            margin: 10px auto;
+            padding: 5px;
+            background-color: lightskyblue;
+            border: 2px solid #000;
+            width: 500px;
+            height: 200px; text-align: center;
+            box-sizing: border-box;
+        }
+        body{
+            background-image: url('https://up.yimg.com/ib/th?id=OIP.NPQz-Hj2hFSPK1BFxkBY2AHaGl&pid=Api&rs=1&c=1&qlt=95&w=140&h=124');
+            background-repeat: no repeat;
+            background-position: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="b-m">hello world!</div><br><br>
+    <span class="b-m"> hello world</span><br><br>
+    <div>hello world</div>
+    <div></div>
+    
+</body>
+</html>

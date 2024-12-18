@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Groww Clone - Frameset Layout</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .header {
+            background-color: #04A287;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+        .sidebar {
+            background-color: #f1f1f1;
+            height: 100%;
+            padding: 20px;
+        }
+        .main {
+            padding: 20px;
+        }
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .sidebar ul li {
+            margin-bottom: 20px;
+        }
+        .sidebar ul li a {
+            text-decoration: none;
+            color: #04A287;
+            font-size: 18px;
+        }
+        .sidebar img {
+            width: 150px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<!-- Create the frameset for the layout -->
+<frameset rows="120px,*" border="0">
+    <!-- Header frame -->
+    <frame src="groww_header.html" name="headerFrame" scrolling="no" noresize>
+
+    <!-- Content divided into sidebar and main content -->
+    <frameset cols="250px,*" border="0">
+        <!-- Sidebar frame -->
+        <frame src="groww_sidebar.html" name="sidebarFrame" scrolling="auto" noresize>
+
+        <!-- Main content frame -->
+        <frame src="groww_main.html" name="mainFrame" scrolling="auto">
+    </frameset>
+
+    <noframes>
+        <body>Your browser does not support frames. Please upgrade to a modern browser.</body>
+    </noframes>
+</frameset>
+</html>

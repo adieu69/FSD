@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Placement Form</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .required::after {
+      content: " *";
+      color: red;
+    }
+    #drop-area {
+      border: 2px dashed #007bff;
+      padding: 30px;
+      text-align: center;
+      color: #007bff;
+      background-color: #f8f9fa;
+      cursor: pointer;
+      margin-bottom: 20px;
+    }
+    #drop-area.hover {
+      background-color: #e2e6ea;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container my-5">
+    <h2 class="text-center mb-4">Placement Registration Form</h2>
+    
+    <form>
+
+      <!-- First Name and Last Name Fields -->
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="firstName" class="required">First Name</label>
+          <input type="text" class="form-control" id="firstName" placeholder="Enter first name" required>
+        </div>
+        <div class="form-group col-md-6">
+          <label for="lastName" class="required">Last Name</label>
+          <input type="text" class="form-control" id="lastName" placeholder="Enter last name" required>
+        </div>
+      </div>
+
+      <!-- Email and Phone Number Fields -->
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="email" class="required">Email</label>
+          <input type="email" class="form-control" id="email" placeholder="Enter email" required>
+        </div>
+        <div class="form-group col-md-6">
+          <label for="phone" class="required">Phone Number</label>
+          <input type="tel" class="form-control" id="phone" placeholder="Enter phone number" required>
+        </div>
+      </div>
+
+      <!-- Degree and Branch Fields -->
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="degree" class="required">Degree</label>
+          <select id="degree" class="form-control" required>
+            <option selected>Choose...</option>
+            <option>B.Tech</option>
+            <option>M.Tech</option>
+            <option>BBA</option>
+            <option>MBA</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="form-group col-md-6">
+          <label for="branch" class="required">Branch</label>
+          <input type="text" class="form-control" id="branch" placeholder="Enter branch" required>
+        </div>
+      </div>
+
+      
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="graduationYear" class="required">Graduation Year</label>
+          <input type="number" class="form-control" id="graduationYear" placeholder="Enter graduation year" required>
+        </div>
+        <div class="form-group col-md-6">
+          <label for="cgpa" class="required">Current CGPA</label>
+          <input type="number" step="0.01" class="form-control" id="cgpa" placeholder="Enter current CGPA" required>
+        </div>
+      </div>
+
+      <!-- Technical Skills Field -->
+      <div class="form-group">
+        <label for="skills" class="required">Technical Skills</label>
+        <textarea class="form-control" id="skills" rows="3" placeholder="List your technical skills (e.g., Java, Python, C++, etc.)" required></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="resume" class="required">Upload Resume</label>
+        <div id="drop-area" class="form-control">
+          <p>Drag & Drop your resume here, or click to select file</p>
+        </div>
+        <input type="file" id="fileElem" class="form-control-file d-none" accept=".pdf,.doc,.docx" required onchange="handleFiles(this.files)">
+        <button type="button" class="btn btn-secondary mt-3" onclick="document.getElementById('fileElem').click()">Select File</button>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  
+  <script>
+    // Get the drop area and file input elements
+    var dropArea = document.getElementById('drop-area');
+    var fileInput = document.getElementById('fileElem');
+
+    // Highlight the drop area when dragging over it
+    dropArea.addEventListener('dragover', (event) => {
+      event.preventDefault();
+      dropArea.classList.add('hover');
+    });
+
+    // Remove the highlight when dragging leaves the drop area
+    dropArea.addEventListener('dragleave', () => {
+      dropArea.classList.remove('hover');
+    });
+
+    // Handle file drop
+    dropArea.addEventListener('drop', (event) => {
+      event.preventDefault();
+      dropArea.classList.remove('hover');
+      var files = event.dataTransfer.files;
+      handleFiles(files);
+    });
+
+    // Function to handle file selection or drop
+    function handleFiles(files) {
+      if (files.length) {
+        alert('File ' + files[0].name + ' is selected!');
+        // You can upload the file to the server here or display the file details
+      }
+    }
+  </script>
+</body>
+</html>

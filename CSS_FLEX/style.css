@@ -1,0 +1,24 @@
+.container{
+    display:flex;
+    background-color: aliceblue;
+    border: 20px;
+    flex-direction: row;  /*flex direction*/
+    flex-wrap: wrap;
+    flex-flow: column;
+    justify-content:flex-end;
+    align-items: center;
+    align-content: flex-start;
+    row-gap: 10px;
+    order: 5;
+ 
+}
+.item{
+    height: 20px;
+    width: 100px;
+    border: 20;
+    background-color: aqua;
+    flex-grow: 4;
+}
+#first{
+    background-color: black;
+}
